@@ -1,0 +1,53 @@
+.header_likes{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        visibility: hidden;
+        color: white;
+        font-size: 10px;
+    }
+
+    .liked_items{
+        width: 400px;
+        max-height: 800px;
+        display: none;
+        position: absolute;
+        top:100%;
+        right: 0;
+        border: 2px solid;
+        border-color: white;
+
+        .liked_items_item{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom:1px solid;
+            border-color: white;
+            background: linear-gradient(to right, lightgrey, darkgrey);
+            cursor: pointer;
+
+            img{
+                width: 100px;
+                height: 100%;
+                opacity: 0.9;
+            }
+
+            h4{
+                color: white;
+                align-self: center;
+            }
+        }
+    }
+
+    #liked{
+        @include img;
+        display: none;
+        cursor: pointer;
+    }
+}

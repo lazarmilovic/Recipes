@@ -1,0 +1,251 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-360deg); } }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative; }
+
+.container {
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(to right, #5f85ad, #135dab); }
+
+#all_results {
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+header {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: stretch;
+  position: relative;
+  background: linear-gradient(to right, #5f85ad, #135dab);
+  border-bottom: 2px solid;
+  border-color: white; }
+  header .header_img {
+    height: 100%;
+    width: 20%;
+    border-right: 2px solid;
+    border-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header .header_img img {
+      height: 100%;
+      width: 50%; }
+  header .header_search {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 2px solid;
+    border-color: white; }
+    header .header_search input {
+      height: 70%;
+      width: 60%;
+      border-radius: 20px;
+      border: 1px solid;
+      border-color: white; }
+    header .header_search button {
+      height: 50px;
+      width: 150px;
+      border: 1px solid;
+      border-color: white;
+      background: linear-gradient(to right, #fad05c, #e3a805);
+      border-radius: 20px; }
+    header .header_search button:hover {
+      background: linear-gradient(to right, orange, orange); }
+  header .header_likes {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    header .header_likes p {
+      visibility: hidden;
+      color: white;
+      font-size: 10px; }
+    header .header_likes .liked_items {
+      width: 400px;
+      max-height: 800px;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      border: 2px solid;
+      border-color: white; }
+      header .header_likes .liked_items .liked_items_item {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        border-color: white;
+        background: linear-gradient(to right, lightgrey, darkgrey);
+        cursor: pointer; }
+        header .header_likes .liked_items .liked_items_item img {
+          width: 100px;
+          height: 100%;
+          opacity: 0.9; }
+        header .header_likes .liked_items .liked_items_item h4 {
+          color: white;
+          align-self: center; }
+    header .header_likes #liked {
+      width: 40px;
+      height: 40px;
+      display: none;
+      cursor: pointer; }
+
+.header_likes {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .header_likes p {
+    visibility: hidden;
+    color: white;
+    font-size: 10px; }
+  .header_likes .liked_items {
+    width: 400px;
+    max-height: 800px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border: 2px solid;
+    border-color: white; }
+    .header_likes .liked_items .liked_items_item {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid;
+      border-color: white;
+      background: linear-gradient(to right, lightgrey, darkgrey);
+      cursor: pointer; }
+      .header_likes .liked_items .liked_items_item img {
+        width: 100px;
+        height: 100%;
+        opacity: 0.9; }
+      .header_likes .liked_items .liked_items_item h4 {
+        color: white;
+        align-self: center; }
+  .header_likes #liked {
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer; }
+
+.search_result {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 20%;
+  height: 85%;
+  border-right: 2px solid;
+  border-color: white;
+  cursor: pointer; }
+  .search_result .search_result_loader {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .search_result .search_result_loader img {
+      height: 50px;
+      width: 50px;
+      animation: rotation 2s infinite; }
+  .search_result .search_result_div {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid;
+    border-color: white;
+    cursor: pointer; }
+    .search_result .search_result_div img {
+      width: 50%;
+      height: 100%; }
+    .search_result .search_result_div .search_result_div_text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .search_result .search_result_div .search_result_div_text h6 {
+        color: white; }
+  .search_result .search_result_div:hover {
+    background-color: gray; }
+
+.full_recipe {
+  width: 80%;
+  height: 85%;
+  border-right: 2px solid;
+  border-color: white;
+  display: flex; }
+  .full_recipe .full_recipe_details {
+    height: 100%;
+    width: 60%;
+    justify-content: center; }
+    .full_recipe .full_recipe_details .full_recipe_details_info {
+      display: flex;
+      justify-content: space-between; }
+      .full_recipe .full_recipe_details .full_recipe_details_info h4 {
+        height: 5%;
+        width: 100%;
+        color: white; }
+      .full_recipe .full_recipe_details .full_recipe_details_info .like_me {
+        display: flex;
+        flex-direction: column; }
+        .full_recipe .full_recipe_details .full_recipe_details_info .like_me p {
+          color: white;
+          font-size: 12px; }
+        .full_recipe .full_recipe_details .full_recipe_details_info .like_me img {
+          width: 50px;
+          height: 50px;
+          cursor: pointer; }
+    .full_recipe .full_recipe_details ul {
+      height: 90%;
+      width: 90%;
+      display: flex;
+      flex-direction: column; }
+  .full_recipe .full_recipe_image {
+    height: 100%;
+    width: 40%; }
+    .full_recipe .full_recipe_image img {
+      width: 100%;
+      height: 40%; }
+    .full_recipe .full_recipe_image #full_recipe_external_details {
+      height: 60%;
+      width: 100%; }
+      .full_recipe .full_recipe_image #full_recipe_external_details h5 {
+        color: white; }
+      .full_recipe .full_recipe_image #full_recipe_external_details a {
+        text-decoration: none;
+        color: black; }
+      .full_recipe .full_recipe_image #full_recipe_external_details a:hover {
+        color: blue; }
+
+footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  color: #135dab;
+  bottom: 0;
+  right: 0; }

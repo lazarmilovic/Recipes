@@ -1,0 +1,53 @@
+header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: stretch;
+    position: relative;
+    @include background;
+    @include border_bottom;
+    
+
+    .header_img{
+        height: 100%;
+        width: 20%;
+        @include right_border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 100%;
+            width: 50%;
+        }
+        
+    }
+
+    .header_search{
+        width: 65%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include right_border;
+
+        input{
+            height: 70%;
+            width: 60%;
+            border-radius: 20px;
+            border: 1px solid;
+            border-color: white;
+        }
+
+        button{
+            @include btn;
+
+        }
+
+        button:hover{
+            @include btn-hover;
+        }
+    }
+
+
+}

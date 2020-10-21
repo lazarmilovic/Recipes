@@ -1,0 +1,35 @@
+@mixin img{
+    width: 40px;
+    height: 40px;
+}
+
+@mixin btn{
+    height: 50px;
+    width: 150px;
+    border: 1px solid;
+    border-color: white;
+    background: linear-gradient(to right, #fad05c, #e3a805);
+    border-radius: 20px;
+}
+
+@mixin btn-hover{
+    background: linear-gradient(to right, orange, orange);
+}
+
+@mixin background{
+    background: linear-gradient(to right, #5f85ad, #135dab);
+}
+
+@mixin thick_border {
+    border-color: white;
+}
+
+@mixin right_border {
+    border-right:2px solid;
+    @include thick_border;
+}
+
+@mixin border_bottom{
+    border-bottom:2px solid;
+    @include thick_border;
+}
