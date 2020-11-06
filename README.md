@@ -1,7 +1,7 @@
 # Recipes
 Fetching the recipes data from a third-party API based on entered query. 
 
-![alt text](https://github.com/lazarmilovic/Recipes/blob/master/Preview.png?raw=true)
+![alt text](https://github.com/lazarmilovic/Recipes/blob/master/Preview.png?raw=true);
 
 
 When user enters a query and clicks Search button, the AJAX call will be triggered which will return the recipes that contain the query. Each recipe will be rendered on the left side of the screen with a "click" event attached to it. The event will trigger another AJAX call which will pass the recipe's ID to the API and get the full recipe which will be rendered on the right side of the screen. 
